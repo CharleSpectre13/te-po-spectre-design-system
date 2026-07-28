@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Surfaces */
+  --tepo-void: #03010A;
+  --tepo-night: #0A0614;
+  --tepo-surface: #120C24;
+  --tepo-elevated: #1A1235;
+
+  /* Accents – ice / phantom */
+  --tepo-cyan: #00E5D0;
+  --tepo-cyan-bright: #5EFBF0;
+  --tepo-ice: #A8D8FF;
+
+  /* Accents – fire / legacy */
+  --tepo-ember: #FF4D2E;
+  --tepo-ember-soft: #FF8A3D;
+  --tepo-gold: #F5C542;
+  --tepo-gold-bright: #FFE08A;
+
+  /* Text & neutrals */
+  --tepo-bone: #F2EDE4;
+  --tepo-muted: #9B93B0;
+
+  /* Glows */
+  --tepo-glow-cyan: 0 0 24px rgba(0, 229, 208, 0.45);
+  --tepo-glow-gold: 0 0 28px rgba(245, 197, 66, 0.5);
+  --tepo-glow-ember: 0 0 20px rgba(255, 77, 46, 0.4);
+
+  --background: var(--tepo-void);
+  --foreground: var(--tepo-bone);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .glow-cyan {
+    box-shadow: var(--tepo-glow-cyan);
+  }
+  .glow-gold {
+    box-shadow: var(--tepo-glow-gold);
+  }
+}
